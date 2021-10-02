@@ -1,0 +1,7 @@
+{
+  "name": "Programming Masters",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,35 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="exitApp()"><ion-icon name="arrow-back-outline"></ion-icon>&nbsp;Exit App</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="'../../assets/images/signup.svg'"></ion-img>
+      <ion-card-title>Welcome to Programming Masters</ion-card-title>
+      <ion-card-subtitle>Let's start a New Journey by creating Your Profile</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Your Name</ion-label>
+        <ion-input enterkeyhint="next" [(ngModel)]="username" placeholder="Burhanuddin Mulla Hamzabhai" required="true" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Email</ion-label>
+        <ion-input enterkeyhint="next" [(ngModel)]="email" inputmode="email" placeholder="yourname@email.com" required="true" type="email" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Password</ion-label>
+        <ion-input enterkeyhint="go" [(ngModel)]="password" inputmode="password" placeholder="*****" required="true" type="password" clearInput="true"></ion-input>
+      </ion-item>
+      <ion-button expand="full" class="ion-margin-top" (click)="signUp()">
+    Signup
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+  <ion-footer class="ion-text-center ion-padding">
+    Already a User? <ion-label (click)="login()" color=primary>Login</ion-label>
+  </ion-footer>

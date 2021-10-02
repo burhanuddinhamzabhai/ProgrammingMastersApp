@@ -1,0 +1,6 @@
+{
+	"appId": "dev.burhanuddinhamzabhai.programmingmasters",
+	"appName": "Programming Masters",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
