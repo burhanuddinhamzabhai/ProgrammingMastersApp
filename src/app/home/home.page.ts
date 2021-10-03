@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { AppCommon } from '../common/app.common';
@@ -33,9 +34,13 @@ export class HomePage implements OnInit {
       console.log('back');
     });
   }
-
+  slidesOptions = {
+    slidesPerView: 1.5
+  };
   ngOnInit() {
   }
+
+
 
   logout(){
     this.auth.signOut().then(()=>{
