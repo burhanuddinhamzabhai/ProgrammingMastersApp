@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AppCommon } from '../common/app.common';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
+import { ModalController } from '@ionic/angular';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class SignUpPage implements OnInit {
   username = '';
   email = '';
   password = '';
-  constructor(private route: Router, private appCommon: AppCommon) { }
+  constructor(private route: Router, private appCommon: AppCommon,public modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
@@ -56,5 +57,9 @@ export class SignUpPage implements OnInit {
 
   exitApp(){
     this.appCommon.exit();
+  }
+
+  async dismiss() {
+    return await this.modalCtrl.dismiss();
   }
 }

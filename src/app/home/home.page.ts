@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
 
   logout(){
     this.auth.signOut().then(()=>{
-      this.route.navigate(['/login']);
+      this.route.navigate(['/welcome']);
     });
   }
 }

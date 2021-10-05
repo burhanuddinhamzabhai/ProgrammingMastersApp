@@ -22,7 +22,7 @@ export class SplashScreenPage implements OnInit {
       } else {
         // User is signed out
         // ...
-        this.route.navigate(['/login']);
+        this.route.navigate(['/welcome']);
       }
     });
 

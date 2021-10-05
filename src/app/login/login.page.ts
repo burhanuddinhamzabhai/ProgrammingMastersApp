@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Platform, AlertController } from '@ionic/angular';
 import { AppCommon } from '../common/app.common';
 import { getAuth,onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginPage implements OnInit {
   email = '';
   password = '';
   auth = getAuth();
-  constructor(private route: Router, private appCommon: AppCommon) {
+  constructor(private route: Router, private appCommon: AppCommon,public modalCtrl: ModalController) {
 
   }
 
@@ -51,5 +52,9 @@ export class LoginPage implements OnInit {
   }
   exitApp(){
     this.appCommon.exit();
+  }
+
+  async dismiss() {
+    await this.modalCtrl.dismiss();
   }
 }
